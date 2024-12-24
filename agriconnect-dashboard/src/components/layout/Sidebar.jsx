@@ -20,7 +20,7 @@ const navigation = [
     {name:'Settings',href:'/settings',icon:CogIcon},
 ];
 
-const Sidebar = ({open,setOpen}) => {
+export default function Sidebar({open,setOpen}){
     const location = useLocation();
   return (
     <>
@@ -40,9 +40,9 @@ const Sidebar = ({open,setOpen}) => {
     </>
   )
 }
-export default Sidebar
 
-function sidebarContent() {
+
+function SidebarContent() {
     const location = useLocation();
     return (
         <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
