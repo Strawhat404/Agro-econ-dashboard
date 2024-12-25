@@ -15,33 +15,33 @@ export default function App(){
 
           {/* protected route */}
           <Route element={<RequireAuth><DashboardLayout/></RequireAuth>}>
-          <Route path="/" element={<Dashboard />} />
-          
-          {/* Products route */}
-          <Route path="/products" element={<Products />} />
-          <Route path = "/products/add" element={<AddProduct />} />  
-          <Route path = "/products/:id" element= {<ProductDetails/>}/>
+            <Route path="/" element={<Dashboard />} />
+            
+            {/* Products route */}
+            <Route path="/products" element={<Products />} />
+            <Route path = "/products/add" element={<AddProduct />} />  
+            <Route path = "/products/:id" element= {<ProductDetails/>}/>
 
-          {/* Orders Route    */}
-          <Route path="/orders" element={<Orders/>} />
-          <Route path = "/orders/:id" element ={<OrderDetails />}/>
+            {/* Orders Route    */}
+            <Route path="/orders" element={<Orders/>} />
+            <Route path = "/orders/:id" element ={<OrderDetails />}/>
 
-          {/* users route */}
-          <Route path="/users" element={<Users/>} />
-          <Route path="/users/management" element={<UserManagement/>} />
+            {/* users route */}
+            <Route path="/users" element={<Users/>} />
+            <Route path="/users/management" element={<UserManagement/>} />
 
-          {/* other routes */}
-          <Route path="/weather" element={<Weather/>} />
-          <Route path="/news" element={<News/>} />
-          <Route path="/logistics" element={<Logistics/>} />
-          <Route path="/analytics" element={<Analytics/>} />
-          <Route path="/settings" element={<Settings/>} />
-          <Route path="/profile" element={<Profile/>} />
-        </Routes>
+            {/* other routes */}
+            <Route path="/weather" element={<Weather/>} />
+            <Route path="/news" element={<News/>} />
+            <Route path="/logistics" element={<Logistics/>} />
+            <Route path="/analytics" element={<Analytics/>} />
+            <Route path="/settings" element={<Settings/>} />
+            <Route path="/profile" element={<Profile/>} />
+          </Route>
 
-        {/* Catch all route */}
-        <Route path="*" element = {<Navigate to="/" replace />} />
-      </Route>
+          {/* Catch all route */}
+          <Route path="*" element = {<Navigate to="/" replace />} />
+      </Routes>
       </DashboardProvider>
     </BrowserRouter>
 
